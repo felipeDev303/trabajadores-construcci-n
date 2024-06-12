@@ -1,0 +1,91 @@
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Espacio para evitar que el contenido sea tapado por el nav */
+body > nav + * {
+  margin-top: 70px; /* Ajusta este valor según la altura real de tu nav */
+}
+
+/* Estilos para el nav */
+nav {
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Estilos para el navbar-brand */
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente el texto */
+  height: 100%; /* Asegura que ocupe toda la altura del navbar */
+}
+
+/* Estilos para el navbar-brand en pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-brand {
+    display: block; /* Cambia a un display de bloque */
+    text-align: center; /* Centra el texto */
+  }
+}
+
+/* Estilos para el contenido principal */
+main {
+  flex: 1;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las secciones */
+section {
+  margin-bottom: 20px;
+}
+
+/* Sobrescribir estilos de Bootstrap para navbar */
+.navbar-default {
+  background-color: #007bff !important; /* Cambia el color de fondo */
+  border-color: #007bff !important; /* Cambia el color del borde */
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important; /* Cambia el color del texto */
+}
+
+/* Estilos para el navbar-brand */
+.navbar-default .navbar-brand {
+  color: #fff !important; /* Cambia el color del texto del navbar-brand */
+}
+
+/* Estilos para el contenedor de la sección de propósito */
+#about {
+  margin-top: 70px; /* Ajusta este valor según la altura real de tu nav */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+  #about {
+    margin-top: 200px; /* Ajusta este valor para dispositivos móviles */
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

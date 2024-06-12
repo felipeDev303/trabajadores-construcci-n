@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Registro || Constructora Horizonte</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Menú Principal -->
+    <nav class="navbar navbar-default navbar-fixed-top bg-primary navbar-dark">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Constructora Horizonte</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">Instrucciones</a></li>
+          <li><a href="#user-list">Usuarios</a></li>
+          <li><a href="#register">Registro</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Instrucciones -->
+    <div id="about" class="container text-center">
+      <div class="container">
+        <h2>Instrucciones</h2>
+        <p>
+          Bienvenido a la plataforma de registro de la Constructora Horizonte.
+          Aquí podrás registrar a los empleados de la empresa. Para ello, llena
+          el formulario de registro con los datos solicitados y haz clic en el
+          botón "Registrarse". Una vez confirmado el registro, el usuario será
+          añadido a la lista de empleados.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sección de Listado de Usuarios -->
+    <section id="user-list" class="container">
+      <h2>Listado de Usuarios</h2>
+      <div class="row" id="userGrid">
+        <!-- Usuarios serán añadidos aquí dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Sección de Registro -->
+    <section id="register" class="container">
+      <h2>Registro de Usuario</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Ingresa tu nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            placeholder="Ingresa tu apellido"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fechaNacimiento"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Ingresa tu correo electrónico"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cargo">Cargo:</label>
+          <select class="form-control" id="cargo" required>
+            <option value="Gerente">Gerente</option>
+            <option value="Arquitecto">Arquitecto</option>
+            <option value="Contador">Contador</option>
+            <option value="Secretaria">Secretaria</option>
+            <option value="Albañil">Albañil</option>
+            <option value="Electricista">Electricista</option>
+            <option value="Plomero">Plomero</option>
+            <option value="Pintor">Pintor</option>
+            <option value="Chofer">Chofer</option>
+            <option value="Guardia">Guardia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fechaIngreso">Fecha de Ingreso:</label>
+          <input type="date" class="form-control" id="fechaIngreso" required />
+        </div>
+        <button type="button" class="btn btn-primary" id="registerBtn">
+          Registrarse
+        </button>
+      </form>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Confirmar Registro</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="modalContent"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmBtn">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center">
+      <div class="container">
+        <p>&copy; 2024 | Constructora Horizonte</p>
+      </div>
+    </footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
